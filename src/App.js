@@ -1,9 +1,9 @@
-import React from 'react';
-import './style.css';
-import Navbar from './components/Navbar';
-import Ejercicio1 from './components/Ejercicio1';
-import Ejercicio2 from './components/Ejercicio2';
-import Ejercicio3 from './components/Ejercicio3';
+import React from "react";
+import "./style.css";
+import Navbar from "./components/NavbarMenu";
+import Ejercicio1 from "./components/Ejercicio1";
+import Ejercicio2 from "./components/Ejercicio2";
+import Ejercicio3 from "./components/Ejercicio3";
 
 export default function App() {
   return (

@@ -1,5 +1,6 @@
-import React from 'react';
-import { MenuItems } from '../data/MenuElements';
+import React from "react";
+import { MenuItems } from "../data/MenuElements";
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Container,
@@ -8,10 +9,10 @@ import {
   NavDropdown,
   Form,
   FormControl,
-  Button,
-} from 'react-bootstrap';
+  Button
+} from "react-bootstrap";
 
-class Navbar extends React.Component {
+class NavbarMenu extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -34,6 +35,13 @@ class Navbar extends React.Component {
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
+                {MenuItems.map((item) => {
+                  return (
+                    <Nav.Link as={Link} to={item.path}>
+                      {item.title}
+                    </Nav.Link>
+                  );
+                })}
                 <Nav.Link href="#action1">Home</Nav.Link>
                 <Nav.Link href="#action2">Link</Nav.Link>
                 <NavDropdown title="Dropdown" id="offcanvasNavbarDropdown">
